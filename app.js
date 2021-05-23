@@ -2,8 +2,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var auth = require('./auth')
-const bodyParser = require('body-parser');
 
 const dotenv = require('dotenv');
 
@@ -21,7 +19,6 @@ var ordersRouter = require('./routes/orders');
 
 var app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(logger('dev'));
 app.use(express.json());
